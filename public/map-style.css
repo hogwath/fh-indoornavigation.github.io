@@ -1,0 +1,51 @@
+*, *:before, *:after, *:focus {box-sizing:border-box;}
+
+.maps {position:relative;width:100%;max-width:800px;margin:20px auto 0;padding:0 5px;}
+.map {position:relative;}
+#og1Map, #og2Map {display:none;}
+
+.map img {max-height:100%;display:block;width:auto;z-index:1;}
+.map .grid {position:absolute;left:0;top:0;width:100%;height:auto;z-index:10;opacity:0.5;}
+
+.map .waypoint:after {content:"";display:block;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);width:50%;height:50%;border-radius:50%;}
+
+.map .waypoint.path:after {background-color:#1398E4;}
+.map .waypoint.start:after {background-color:orange;} /*Startpunkt*/
+.map .waypoint.end:after {background-color:#97b314;} /*Endpunkt*/
+
+.grid-box {width:3.33333%;position:absolute;background-color:transparent;z-index:100;}
+.grid-box:before {content:"";display:block;padding-top:100%;}
+
+#treppe {
+       display:inline-block;
+       width:160px;
+       height:80px;
+       background-color:rgba(0, 80, 129, 1);
+       color:white;
+       padding:3px;
+       font-size: medium;
+       font-weight: normal;
+       border-radius:7px;
+       text-align:center;
+       transform:translate(-50%, -50%);
+       cursor:pointer;
+       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+       text-decoration:none;
+       animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+       from {
+              transform:translate(0, 0);
+       }
+       to {
+              transform:translate(0, -10px);
+       }
+}
+
+#parent-container {
+       margin-top: 5%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+}
